@@ -38,5 +38,5 @@ void Phonebook::toSearch() {
 			}
 		}
 	}
-	std::cin.ignore(); //???????
+	std::cin.ignore();
 }
