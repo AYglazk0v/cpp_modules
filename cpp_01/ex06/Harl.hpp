@@ -2,7 +2,6 @@
 # define HARL_HPP
 
 # include <iostream>
-# include <cstdlib>
 
 class Harl {
 	private:
@@ -15,7 +14,8 @@ class Harl {
 	public:
 		Harl();
 		~Harl();
-		void complain(std::string level);
+		void complain(int level);
+		void filterHarl(const std::string& msg);
 };
 
 #endif
