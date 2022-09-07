@@ -111,31 +111,27 @@ Fixed Fixed::operator--(int) {
 const Fixed& Fixed::min(const Fixed& lhs, const Fixed& rhs) {
 	if (lhs > rhs) {
 		return rhs;
-	} else {
-		return lhs;
-	}
+	} 
+	return lhs;
 }
 
 const Fixed& Fixed::max(const Fixed& lhs, const Fixed& rhs) {
 	if (lhs > rhs) {
 		return lhs;
-	} else {
-		return rhs;
 	}
+	return rhs;
 }
 
 Fixed& Fixed::min(Fixed& lhs, Fixed& rhs) {
 	if (lhs > rhs) {
 		return rhs;
-	} else {
-		return lhs;
 	}
+	return lhs;
 }
 
 Fixed& Fixed::max(Fixed& lhs, Fixed& rhs) {
 	if (lhs > rhs) {
 		return lhs;
-	} else {
-		return rhs;
 	}
+	return rhs;
 }
