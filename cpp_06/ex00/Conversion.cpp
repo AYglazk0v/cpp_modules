@@ -24,8 +24,7 @@ void Conversion::FindActualTypeOfData() {
 	if (data_.size() == 1 && !isdigit(data_[0])){
 		letter_ = static_cast<char>(data_[0]);
 		ConvertChar();
-	}
-	if (CheckForInt() && CheckForFloat() && CheckForDouble() && CheckForSpecial()) {
+	} else if (CheckForInt() && CheckForFloat() && CheckForDouble() && CheckForSpecial()) {
 		throw std::invalid_argument("invalid data");
 	}
 }
@@ -214,3 +213,4 @@ void Conversion::ConvertDouble() {
 void Conversion::ConvertData() {
 	FindActualTypeOfData();
 }
+
