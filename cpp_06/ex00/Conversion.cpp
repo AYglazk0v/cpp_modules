@@ -24,7 +24,7 @@ void Conversion::FindActualTypeOfData() {
 	if (data_.size() == 1 && !isdigit(data_[0])){
 		letter_ = static_cast<char>(data_[0]);
 		ConvertChar();
-	} else if (CheckForInt() && CheckForFloat() && CheckForDouble() && CheckForSpecial()) {
+	} else if (CheckForSpecial() && CheckForInt() && CheckForFloat() && CheckForDouble()) {
 		throw std::invalid_argument("invalid data");
 	}
 }
@@ -107,13 +107,13 @@ void Conversion::ConvertInt() {
 }
 
 int Conversion::CheckForFloat() {
-	std::stringstream ss(data_);
-	float n;
-	ss >> n;
-	if (!ss.fail()) {
-		std::string t;
-		ss >> t;
-		if (t == "f" && !ss.fail() && ss.eof()) {
+	if (data_[data_.size() - 1] == 'f') {
+		std::string tmp = data_;
+		tmp.pop_back();
+		std::stringstream ss(tmp);
+		float n;
+		ss >> n;
+		if (!ss.fail() && ss.eof()) {
 			double num = atof(data_.c_str());
 			if (errno != ERANGE) {
 				float_num_ = num;
