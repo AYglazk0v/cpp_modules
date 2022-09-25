@@ -60,6 +60,7 @@ int main(int argc, char **argv){
 		for (i = fileline.find(source, i++); i != endline; i = fileline.find(source, i++)) {
 			fileline.erase(i, source.length());
 			fileline.insert(i, replacement);
+			i += replacement.length();
 		}
 		output << fileline << std::endl;
 	}
