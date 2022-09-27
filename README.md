@@ -1,6 +1,6 @@
 
 <h1 align="center">
-	Cpp Modules
+	<img src="https://user-images.githubusercontent.com/54292953/142726987-139b4a51-9471-4aa3-9051-1bab383c38c9.png"  width="40px"> Cpp Modules
 </h1>
 
 ## 💡 О проекте:
